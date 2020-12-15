@@ -17,6 +17,7 @@ a.pack()
 with open('data.json') as d:
 	data = json.load(d)
 
+print(data)
 url=''
 dead = False
 
@@ -55,7 +56,8 @@ def choose():
 	l = list()
 	for i in data :
 	 	l.append(data[i])
-
+	 	
+	print(l)
 	x=entry.get()
 	url+=l[int(x)]
 	# threading.Thread(target=fun).start()
@@ -73,10 +75,10 @@ def stop():
 entry = Entry(root,font=("Helvetica", 28))
 entry.pack(pady=20)
 
-my_button = Button(root,text = 'play',font=("Helvetica", 28), command=choose)
+my_button = Button(root,text = 'Play',font=("Helvetica", 28), command=choose)
 my_button.pack()
 
-my_button1 = Button(root,text = 'exit',font=("Helvetica", 28), command=stop)
+my_button1 = Button(root,text = 'Pause',font=("Helvetica", 28), command=stop)
 my_button1.pack()
 
 
