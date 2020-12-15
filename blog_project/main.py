@@ -1,9 +1,18 @@
 from flask import Flask , render_template
+import json
+
+with open('config.json','r') as c:
+	params = json.load(c)["params"]
+
+
+
+
+
 app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return render_template('index.html', params=params)
 
 
 
@@ -23,3 +32,5 @@ def contact():
 
 
 app.run()
+
+
