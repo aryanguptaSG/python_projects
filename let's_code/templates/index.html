@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Lets's Code</title>
+</head>
+<body>
+    <div class="row">
+        <div class="col-lg-6 questionarea">
+            <embed src="{{ url_for('static', filename='ques.pdf') }}" type="application/pdf" width="100%" height="100%">
+        </div>
+        <div class="col-lg-6 ">
+            <form action="/submit" method="POST">
+                <textarea class="codearea" name="code" id="code" ></textarea>
+                <button type="submit" class="submit_button">Submit</button>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
