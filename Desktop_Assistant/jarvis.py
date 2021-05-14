@@ -118,3 +118,8 @@ while True:
     else:
         say("sorry i am quiting")
         break
+
+
+
+
+#http://192.168.43.1:8080/video
