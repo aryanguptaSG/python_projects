@@ -1,4 +1,7 @@
+# Theatre API
+![](../Images/Theater.svg)
 
+---
 **First of all install all the requirements.**
 **There are three end points in the given app.**
 
